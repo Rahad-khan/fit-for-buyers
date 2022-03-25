@@ -3,7 +3,7 @@ import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus} from "@fortawesome/free-solid-svg-icons";
 
-const Proudct = ({ product }) => {
+const Proudct = ({ product , addedToCart}) => {
   const { name, picture, price } = product;
   return (
     <div className="border-2 rounded-lg product-container relative">
@@ -13,7 +13,7 @@ const Proudct = ({ product }) => {
         <p className="text-lg md:text-xl ">Price: ${price}</p>
       </div>
       <div className="flex justify-center">
-      <button className="mb-2 absolute bottom-0 px-10  py-2 font-semibold text-sm md:text-lg bg-sky-500 hover:bg-sky-700 text-white rounded-sm shadow-sm">
+      <button onClick={() => addedToCart(product)} className="mb-2 absolute bottom-0 px-10  py-2 font-semibold text-sm md:text-lg bg-sky-500 hover:bg-sky-700 text-white rounded-sm shadow-sm">
         Add To Cart <FontAwesomeIcon icon={faCartPlus} />
       </button>
       </div>
