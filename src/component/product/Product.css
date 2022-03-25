@@ -1,0 +1,8 @@
+.product-container {
+    height: 400px;
+}
+@media only screen and (max-width: 600px)  {
+    .product-container {
+        height: 360px;
+    }
+}

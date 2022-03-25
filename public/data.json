@@ -3,7 +3,7 @@
       "id": "623ddfc20a6b20b4d03cab0e",
       "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du1115tu/15s-du1115tu-01-228x228.jpg",
       "price": 75600,
-      "name": "HP 15s-du1115TU Celeron N4020 15.6 Inchi HD Laptop"
+      "name": "HP 15s-du11 Laptop"
     },
     {
       "id": "623ddfc250d12422defe6cc2",
@@ -21,19 +21,19 @@
       "id": "623ddfc278f2c9143172146a",
       "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/pavilion-14-dv1234tu/pavilion-14-dv1234tu-01-228x228.jpg",
       "price": 73000,
-      "name": "HP Pavilion 14-dv1234TU Laptop"
+      "name": "HP Pavilion 14-34TU Laptop"
     },
     {
       "id": "623ddfc2ba27b7c0be82353a",
       "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-5/ideapad-slim-5-03-228x228.jpg",
       "price": 76000,
-      "name": "Lenovo IdeaPad Slim 5 Laptop"
+      "name": "Lenovo IdeaPad Laptop"
     },
     {
       "id": "623ddfc2decf595000729a62",
       "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/pavilion-14-ec0223au/pavilion-14-ec0223au-01-228x228.jpg",
       "price": 75500,
-      "name": "HP Pavilion 14-ec0223AU Laptop"
+      "name": "HP Pavilion 14 Laptop"
     },
     {
       "id": "623ddfc2a0ad9f9d82441863",
@@ -45,7 +45,7 @@
       "id": "623ddfc257d28aa16c024a4e",
       "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/thinkbook-15-g2/lenovo-thinkbo%20ok-15-g2-laptop-5-228x228.jpg",
       "price": 65700,
-      "name": "Lenovo ThinkBook 15 G2 Laptop"
+      "name": "Lenovo 15 G2 Laptop"
     },
     {
       "id": "623ddfc2a483fb9fb689fc4f",
@@ -58,5 +58,17 @@
       "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/250-g8/250-g8-01-228x228.jpg",
       "price": 57000,
       "name": "HP 250 G8 Laptop"
+    },
+    {
+      "id": "623ddfc2d239afc9248d8acd",
+      "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/dell/inspiron-15-3510/inspiron-15-3510-01-228x228.jpg",
+      "price": 36000,
+      "name": "Dell Inspiron 15 Laptop"
+    },
+    {
+      "id": "623ddfc2d239afc9248d8ace",
+      "picture": "https://www.startech.com.bd/image/cache/catalog/laptop/asus/vivobook-15-x515ea/vivobook-15-x515ea-01-228x228.jpg",
+      "price": 59000,
+      "name": "Asus Vivo X515MA Laptop"
     }
   ]
