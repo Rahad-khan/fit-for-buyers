@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../cart/Cart';
 import Proudct from '../product/Proudct';
 
 const Products = () => {
@@ -12,8 +13,10 @@ const Products = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     }, []);
+    //function for addedToCart
     const addedToCart = product => {
-        setPickProduct(product);
+        const addedProduct = [...pickProduct, product]
+        setPickProduct(addedProduct);
     }
     return (
         <div className='grid grid-cols-9 gap-8'>
@@ -24,11 +27,17 @@ const Products = () => {
                 }
                 </div>
             </div>
-            <div className="shopping-cart shadow-lg container mx-auto px-4 border-2 col-span-2 rounded-l-lg">
+            {/* CArt */}
+            <div className="shopping-cart shadow-lg container mx-auto px-1 border-2 col-span-2 rounded-l-lg">
                 <div className='mt-10'>
                     <h2 className='text-3xl font-semibold'>Selected Laptops</h2>
+                    {
+                        pickProduct.map(product => <Cart product = {product} key = {product.id}></Cart>)
+                        
+                    }
 
                 </div>
+                {/* Buttons */}
                 <div className='flex justify-center flex-col'>
                     <button className='block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500'>Pick 1 For Me</button>
                     <button className='block w-3/4 py-1 mt-2 text-lg font-medium text-red-500 hover:bg-red-500 hover:text-white rounded-lg border-2 border-red-500'>Reset/Choose Again</button>
