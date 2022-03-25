@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = ({product}) => {
-    console.log(product);
     const {picture, name} = product;
     return (
         <div className='flex items-center'>

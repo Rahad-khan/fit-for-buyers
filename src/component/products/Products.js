@@ -18,6 +18,14 @@ const Products = () => {
         const addedProduct = [...pickProduct, product]
         setPickProduct(addedProduct);
     }
+    const resetProduct = () => setPickProduct([]);
+    const randomSelect = () => {
+        const randomNumber =Math.floor(Math.random() * pickProduct.length);
+        const pickedOne = pickProduct[randomNumber];
+        if (pickedOne) {
+            setPickProduct([pickedOne])
+        }
+    }
     return (
         <div className='grid grid-cols-9 gap-8'>
             <div className="products col-span-7 container mx-auto px-4 md:px-16">
@@ -39,8 +47,8 @@ const Products = () => {
                 </div>
                 {/* Buttons */}
                 <div className='flex justify-center flex-col'>
-                    <button className='block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500'>Pick 1 For Me</button>
-                    <button className='block w-3/4 py-1 mt-2 text-lg font-medium text-red-500 hover:bg-red-500 hover:text-white rounded-lg border-2 border-red-500'>Reset/Choose Again</button>
+                    <button onClick={randomSelect} className='block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500'>Pick 1 For Me</button>
+                    <button onClick={resetProduct} className='block w-3/4 py-1 mt-2 text-lg font-medium text-red-500 hover:bg-red-500 hover:text-white rounded-lg border-2 border-red-500'>Reset/Choose Again</button>
                 </div>
             </div>
         </div>
