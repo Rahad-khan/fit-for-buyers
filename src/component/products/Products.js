@@ -27,8 +27,8 @@ const Products = () => {
         }
     }
     return (
-        <div className='grid grid-cols-9 gap-8'>
-            <div className="products col-span-7 container mx-auto px-4 md:px-16">
+        <div className='grid grid-cols-2 md:grid-cols-9 gap-2'>
+            <div className="products md:col-span-7 container mx-auto px-4 md:px-10">
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     products.map(product => <Proudct product= {product} addedToCart= {addedToCart} key= {product.id}></Proudct>)
@@ -36,19 +36,20 @@ const Products = () => {
                 </div>
             </div>
             {/* CArt */}
-            <div className="shopping-cart shadow-lg container mx-auto px-1 border-2 col-span-2 rounded-l-lg">
-                <div className='mt-10'>
-                    <h2 className='text-3xl font-semibold'>Selected Laptops</h2>
+            <div className="shopping-cart shadow-xl  pl-2 mr-2 border-2 md:col-span-2 rounded-l-lg">
+                <div className='mt-10 sticky top-8'>
+                    <h2 className='text-2xl md:text-3xl mb-4 font-semibold'>Selected Laptops</h2>
                     {
                         pickProduct.map(product => <Cart product = {product} key = {product.id}></Cart>)
                         
                     }
 
-                </div>
-                {/* Buttons */}
-                <div className='flex justify-center flex-col'>
-                    <button onClick={randomSelect} className='block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500'>Pick 1 For Me</button>
-                    <button onClick={resetProduct} className='block w-3/4 py-1 mt-2 text-lg font-medium text-red-500 hover:bg-red-500 hover:text-white rounded-lg border-2 border-red-500'>Reset/Choose Again</button>
+                
+                    {/* Buttons */}
+                    <div className='flex justify-center flex-col'>
+                        <button onClick={randomSelect} className='block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500'>Pick 1 For Me</button>
+                        <button onClick={resetProduct} className='block w-3/4 py-1 mt-2 text-lg font-medium text-red-500 hover:bg-red-500 hover:text-white rounded-lg border-2 border-red-500'>Reset</button>
+                    </div>
                 </div>
             </div>
         </div>
