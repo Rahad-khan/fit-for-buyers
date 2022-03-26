@@ -11,7 +11,8 @@
   }
   
   .accordion-title {
-    font-weight: 600;
+    font-size: large;
+    font-weight: 800;
     cursor: pointer;
     color: #666;
     padding: 0.5em 1.5em;

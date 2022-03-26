@@ -17,7 +17,7 @@ const Products = () => {
   //function for addedToCart
   const addedToCart = (product) => {
     if (pickProduct.length > 3) {
-      return alert("can't added more");
+      return alert("can't added more than 4 items");
     }
     const found = pickProduct.find((pro) => pro.id === product.id);
     let addedProduct;
