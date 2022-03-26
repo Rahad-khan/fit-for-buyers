@@ -15,15 +15,21 @@ const Products = () => {
     }, []);
     //function for addedToCart
     const addedToCart = product => {
-        const addedProduct = [...pickProduct, product]
+        if (pickProduct.length > 3) {
+           return alert("can't added more")
+        }
+        const found = pickProduct.find(pro => pro.id === product.id);
+        let addedProduct;
+        !found ? addedProduct = [...pickProduct, product] : addedProduct = [...pickProduct];
         setPickProduct(addedProduct);
+        console.log(pickProduct.length);
     }
     const resetProduct = () => setPickProduct([]);
     const randomSelect = () => {
         const randomNumber =Math.floor(Math.random() * pickProduct.length);
         const pickedOne = pickProduct[randomNumber];
         if (pickedOne) {
-            setPickProduct([pickedOne])
+            setPickProduct([pickedOne]);
         }
     }
     return (
@@ -43,8 +49,7 @@ const Products = () => {
                         pickProduct.map(product => <Cart product = {product} key = {product.id}></Cart>)
                         
                     }
-
-                
+                                
                     {/* Buttons */}
                     <div className='flex justify-center flex-col'>
                         <button onClick={randomSelect} className='block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500'>Pick 1 For Me</button>
