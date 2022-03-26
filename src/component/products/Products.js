@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Cart from "../cart/Cart";
 import Proudct from "../product/Proudct";
+import Random from "../random/Random";
 
 const Products = () => {
   // For Products load from json file
@@ -52,9 +53,9 @@ const Products = () => {
       </div>
       {/* CArt */}
       <div className="shopping-cart shadow-xl  pl-2 mr-2 border-2 md:col-span-2 rounded-l-lg">
-        <div className="mt-10 sticky top-8">
+        <div className="mt-6 sticky top-2">
           <h2 className="text-2xl md:text-3xl mb-4 font-semibold">
-            Selected Laptops
+            Selected Products
           </h2>
           {pickProduct.map((product) => (
             <Cart product={product} key={product.id}></Cart>
@@ -76,7 +77,7 @@ const Products = () => {
             </button>
           </div>
           {randomProduct.map((product) => (
-            <Cart product={product} key={product.id}></Cart>
+            <Random product={product} key={product.id}></Random>
           ))}
         </div>
       </div>
