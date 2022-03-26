@@ -1,7 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Cart from "../cart/Cart";
 import Proudct from "../product/Proudct";
 import Random from "../random/Random";
+import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
 
 const Products = () => {
   // For Products load from json file
@@ -67,13 +69,13 @@ const Products = () => {
               onClick={randomSelect}
               className="block w-3/4 py-1 mt-8 text-lg font-medium text-green-500 hover:bg-green-500 hover:text-white rounded-lg border-2 border-green-500"
             >
-              Pick 1 For Me
+              Pick 1 For Me 
             </button>
             <button
               onClick={resetProduct}
               className="block w-3/4 py-1 mt-2 text-lg font-medium text-red-500 hover:bg-red-500 hover:text-white rounded-lg border-2 border-red-500"
             >
-              Reset
+              Reset <FontAwesomeIcon icon={faPowerOff}/>
             </button>
           </div>
           {randomProduct.map((product) => (
