@@ -11,7 +11,7 @@ function App() {
         <Products></Products>
       </main>
       <section>
-        <div className="w-1/2 mx-auto my-6">
+        <div className="md:w-1/2 mx-auto my-6">
           <h1 className="font-bold text-3xl text-center my-5">Questions and Answer Area</h1>
           <Accordion title="How React Work?">
             React is a popular Javascript library.React build on some core concepts. They are JSX,Components,State,Props,VirtualDOM etc.
